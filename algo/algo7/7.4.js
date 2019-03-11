@@ -1,5 +1,6 @@
 const readlineSync = require("readline-sync");
 var array = []
+var cheat=0
 
 
 function thePizzaDream(){
@@ -27,11 +28,18 @@ if (x==1){
 
 
 }else if (x==3){
-    console.log(array);
-    var cheat = (readlineSync.question("Enter your action's number:"));
-    array.splice(cheat-1,cheat-1)  
-    thePizzaDream();
+            console.log(array);
+            cheat = (readlineSync.question("Enter pizza you want to remove:"));
 
+    for (i=0;i < array.length;i++){
+            console.log(cheat + array[i]);
+
+        if(cheat == array[i]){
+            array.splice( array.indexOf(cheat), 1 );
+            
+        }else{
+    }}
+    thePizzaDream();
 
 
 }else if (x==4){
